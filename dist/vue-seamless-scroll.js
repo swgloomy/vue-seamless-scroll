@@ -95,7 +95,6 @@ exports.default = {
       xPos: 0,
       yPos: 0,
       delay: 0,
-      copyHtml: '',
       height: 0,
       width: 0,
       realBoxWidth: 0,
@@ -383,7 +382,6 @@ exports.default = {
 
       this.$nextTick(function () {
         _this4._dataWarm(_this4.data);
-        _this4.copyHtml = '';
         _this4.height = _this4.$refs.wrap.offsetHeight;
         _this4.width = _this4.$refs.wrap.offsetWidth;
         var slotListWidth = _this4.$refs.slotList.offsetWidth;
@@ -405,7 +403,6 @@ exports.default = {
         if (_this4.scrollSwitch) {
           var timer = void 0;
           if (timer) clearTimeout(timer);
-          _this4.copyHtml = _this4.$refs.slotList.innerHTML;
           setTimeout(function () {
             _this4.realBoxHeight = _this4.$refs.realBox.offsetHeight;
             _this4._move();
@@ -808,10 +805,7 @@ var render = function() {
           2
         ),
         _vm._v(" "),
-        _c("div", {
-          style: _vm.float,
-          domProps: { innerHTML: _vm._s(_vm.copyHtml) }
-        })
+        _c("div", { style: _vm.float }, [_vm._t("default")], 2)
       ]
     )
   ])
